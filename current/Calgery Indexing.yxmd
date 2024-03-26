@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>superstore.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Row ID" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Order ID" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Order Date" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="Date" />
+            <Field name="Order Priority" size="255" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Order Quantity" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Sales" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Discount" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Ship Mode" size="255" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Profit" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Unit Price" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Shipping Cost" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="Customer Name" size="255" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="City" size="255" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Zip Code" size="255" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="State" size="255" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Region" size="255" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Customer Segment" size="255" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Product Category" size="255" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Product Sub-Category" size="255" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Product Name" size="255" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="V_WString" />
+            <Field name="Product Container" size="255" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="Product Base Margin" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\superstore.xlsx|||`Sheet1$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="174" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="CalgaryLoadersGui.CalgaryLoader.CalgaryLoader">
+        <Position x="294" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RootFileName>E:\WellsFargo - Advanced\Superstore.cydb</RootFileName>
+          <UseLicenseKey value="False" />
+          <Fields>
+            <Field field="Row ID" data="True" index="False" />
+            <Field field="Order ID" data="True" index="False" />
+            <Field field="Order Date" data="True" index="False" />
+            <Field field="Order Priority" data="True" index="True" indexType="Auto" />
+            <Field field="Order Quantity" data="True" index="False" />
+            <Field field="Sales" data="True" index="False" />
+            <Field field="Discount" data="True" index="False" />
+            <Field field="Ship Mode" data="True" index="False" />
+            <Field field="Profit" data="True" index="False" />
+            <Field field="Unit Price" data="True" index="False" />
+            <Field field="Shipping Cost" data="True" index="False" />
+            <Field field="Customer Name" data="True" index="True" indexType="Auto" />
+            <Field field="City" data="True" index="False" />
+            <Field field="Zip Code" data="True" index="False" />
+            <Field field="State" data="True" index="False" />
+            <Field field="Region" data="True" index="True" indexType="Auto" />
+            <Field field="Customer Segment" data="True" index="True" indexType="Auto" />
+            <Field field="Product Category" data="True" index="True" indexType="Auto" />
+            <Field field="Product Sub-Category" data="True" index="False" />
+            <Field field="Product Name" data="True" index="False" />
+            <Field field="Product Container" data="True" index="False" />
+            <Field field="Product Base Margin" data="True" index="False" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Superstore.cydb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="CalgaryLoaders.dll" EngineDllEntryPoint="AlteryxCalgaryLoader" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Calgery Indexing</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="3156943a-108a-4354-9a9b-fb4148a54b08" />
+      <Telemetry>
+        <PreviousWorkflowId value="7807bb4e-dff1-4286-bbc4-9c7995977647" />
+        <OriginWorkflowId value="7807bb4e-dff1-4286-bbc4-9c7995977647" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

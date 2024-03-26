@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" SearchSubDirs="False" />
+          <FormatSpecificOptions UseDcm="true" Format="19" RecordLimit="" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Arrange.Arrange">
+        <Position x="210" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <KeyFields orderChanged="False" />
+          <OutputFields>
+            <Columns />
+            <Data />
+          </OutputFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxArrange" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="Regression">
+        <Position x="126" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <algorithm_selection />
+          <algorithm_configs>
+            <algorithm_name>linear_regression</algorithm_name>
+            <algorithm_config>
+              <fit_intercept>true</fit_intercept>
+              <normalize>true</normalize>
+            </algorithm_config>
+          </algorithm_configs>
+          <algorithm_configs>
+            <algorithm_name>random_forest_regressor</algorithm_name>
+            <algorithm_config>
+              <n_estimators>100</n_estimators>
+              <criterion>mse</criterion>
+              <max_depth_none>false</max_depth_none>
+              <max_depth>10</max_depth>
+              <min_samples_split_int>true</min_samples_split_int>
+              <min_samples_split_int_val>2</min_samples_split_int_val>
+              <min_samples_split_pct_val>0.01</min_samples_split_pct_val>
+              <max_features_type>auto</max_features_type>
+              <max_features_input>1</max_features_input>
+              <min_impurity_decrease>0</min_impurity_decrease>
+              <min_weight_fraction_leaf>0</min_weight_fraction_leaf>
+              <random_state_none>false</random_state_none>
+              <random_state>10</random_state>
+              <bootstrap>true</bootstrap>
+            </algorithm_config>
+          </algorithm_configs>
+          <algorithm_configs>
+            <algorithm_name>decision_tree_regressor</algorithm_name>
+            <algorithm_config>
+              <criterion>mse</criterion>
+              <max_depth_none>false</max_depth_none>
+              <max_depth>10</max_depth>
+              <min_samples_split_int>true</min_samples_split_int>
+              <min_samples_split_int_val>2</min_samples_split_int_val>
+              <min_samples_split_pct_val>0.01</min_samples_split_pct_val>
+              <max_features_type>auto</max_features_type>
+              <max_features_input>1</max_features_input>
+              <min_impurity_decrease>0</min_impurity_decrease>
+              <min_weight_fraction_leaf>0</min_weight_fraction_leaf>
+              <random_state_none>false</random_state_none>
+              <random_state>10</random_state>
+              <max_leaf_nodes_none>true</max_leaf_nodes_none>
+              <max_leaf_nodes>10</max_leaf_nodes>
+              <splitter>best</splitter>
+              <presort>false</presort>
+            </algorithm_config>
+          </algorithm_configs>
+          <schemaID>Tools.Regression.2</schemaID>
+          <DesignerVersion />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="Python" EngineDllEntryPoint="Regression\main.py" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Arrange Tool</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="90022a3c-81ec-4154-b8df-33854d969542" />
+      <Telemetry>
+        <PreviousWorkflowId value="155df89a-fcde-4f68-a492-7bc57e5fcc8b" />
+        <OriginWorkflowId value="155df89a-fcde-4f68-a492-7bc57e5fcc8b" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

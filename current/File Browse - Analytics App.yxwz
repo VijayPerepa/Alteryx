@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="210" y="138" width="218" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Source to Dest Container</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Source to Dest Container</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="234" y="210" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`</File>
+              <FormatSpecificOptions>
+                <FirstRowData>False</FirstRowData>
+                <ImportLine>1</ImportLine>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>PowerBi Dashboard Avanced.xlsx
+Query=`Revenue Data$`</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Customer" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="DOJ" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Date" />
+                <Field name="Stundent Name" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="Department" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="City" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="Branch" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="Application" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="Duration" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Double" />
+                <Field name="Fees perHour" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Double" />
+                <Field name="Column1" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="Lat" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Double" />
+                <Field name="Long" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Double" />
+                <Field name="State" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="RecordID" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+            <Position x="366" y="186" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Mode>Simple</Mode>
+              <Simple>
+                <Operator>=</Operator>
+                <Field>City</Field>
+                <Operands>
+                  <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+                  <DateType>fixed</DateType>
+                  <PeriodDate>2024-03-18 18:58:31</PeriodDate>
+                  <PeriodType>
+                  </PeriodType>
+                  <PeriodCount>0</PeriodCount>
+                  <Operand>Bangalore</Operand>
+                  <StartDate>2024-03-18 18:58:31</StartDate>
+                  <EndDate>2024-03-18 18:58:31</EndDate>
+                </Operands>
+              </Simple>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>[City] = "Bangalore"</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="True">
+              <RecordInfo>
+                <Field name="Customer" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="DOJ" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Date" />
+                <Field name="Stundent Name" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="Department" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="City" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="Branch" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="Application" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="Duration" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Double" />
+                <Field name="Fees perHour" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Double" />
+                <Field name="Column1" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="Lat" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Double" />
+                <Field name="Long" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Double" />
+                <Field name="State" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="RecordID" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo connection="False">
+              <RecordInfo>
+                <Field name="Customer" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="DOJ" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Date" />
+                <Field name="Stundent Name" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="Department" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="City" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="Branch" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="Application" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="Duration" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Double" />
+                <Field name="Fees perHour" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Double" />
+                <Field name="Column1" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="Lat" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Double" />
+                <Field name="Long" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Double" />
+                <Field name="State" size="255" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="V_String" />
+                <Field name="RecordID" source="File: E:\PowerBi Dashboard Avanced.xlsx|||`Revenue Data$`" type="Double" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="534" y="318" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="25">C:\Users\perep\OneDrive\Desktop\Myfile.xlsx|||Sheet1</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <PreserveFormat>False</PreserveFormat>
+                <SkipFieldNames>False</SkipFieldNames>
+                <OutputOption>Overwrite</OutputOption>
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>Myfile.xlsx
+Query=Sheet1</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="366" y="42" width="205" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>File Browser Container</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>File Browser Container</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.FileBrowse.FileBrowse">
+            <Position x="390" y="90" width="59" height="59" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>File Browse (6)</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+            <Position x="402" y="173" width="59" height="59" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Update Value</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="126" y="42" width="173" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Group Container</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Group Container</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+            <Position x="149" y="89" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <SummarizeFields>
+                <SummarizeField field="City" action="GroupBy" rename="City" />
+                <SummarizeField field="City" action="Count" rename="Count" />
+              </SummarizeFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="City" size="255" source="Summarize: GroupBy - City" type="V_String" />
+                <Field name="Count" source="Summarize: Count - City" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+            <Position x="282" y="114" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <GroupFields />
+              <HeaderField field="City" />
+              <DataField field="Count" />
+              <Methods>
+                <Method method="Sum" />
+              </Methods>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="Bangalore" source="CrossTab:Header:City:Bangalore:Sum:" type="Int64" />
+                <Field name="Chennai" source="CrossTab:Header:City:Chennai:Sum:" type="Int64" />
+                <Field name="Hyderabad" source="CrossTab:Header:City:Hyderabad:Sum:" type="Int64" />
+                <Field name="Kolkata" source="CrossTab:Header:City:Kolkata:Sum:" type="Int64" />
+                <Field name="Nagpur" source="CrossTab:Header:City:Nagpur:Sum:" type="Int64" />
+                <Field name="New_Delhi" source="CrossTab:Header:City:New Delhi:Sum:" type="Int64" />
+                <Field name="Pune" source="CrossTab:Header:City:Pune:Sum:" type="Int64" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.DropDownListBox.DropDown">
+            <Position x="414" y="90" width="59" height="59" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Drop Down (10)</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+            <Position x="342" y="185" width="59" height="59" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <AnnotationText>Update Value</AnnotationText>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="11" Connection="Action" />
+      <Destination ToolID="3" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="7" Connection="Action" />
+      <Destination ToolID="4" Connection="Action" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="6" Connection="Question" />
+      <Destination ToolID="7" Connection="Question" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Question Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="10" Connection="Question" />
+      <Destination ToolID="11" Connection="Question" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>File Browse (6)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Drop Down (10)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>File Browse - Analytics App</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="b54d14ce-31c9-46ce-b4ef-d3203bae3182" />
+      <Telemetry>
+        <PreviousWorkflowId value="85714401-81df-4f8a-ad15-6970dfa452fe" />
+        <OriginWorkflowId value="85714401-81df-4f8a-ad15-6970dfa452fe" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateOutput</Type>
+              <Description />
+              <ToolId value="7" />
+              <Variable />
+              <OutputTool value="4" />
+            </Action>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="11" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="True" />
+              <ReplaceText>Bangalore</ReplaceText>
+              <Destination>3/Simple/Operands/Operand</Destination>
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (5)</Name>
+          <ToolId value="5" />
+          <Questions>
+            <Question>
+              <Type>FileBrowse</Type>
+              <Description>Select your File Location</Description>
+              <Name>File Browse (6)</Name>
+              <ToolId value="6" />
+              <SaveAs value="False" />
+              <Mode>DW2</Mode>
+              <DW2_SpatialOnly value="False" />
+              <DW2_FieldMap value="False" />
+              <InputToolId value="-1" />
+            </Question>
+            <Question>
+              <Type>ListBox</Type>
+              <Description>Select your City</Description>
+              <Name>Drop Down (10)</Name>
+              <ToolId value="10" />
+              <Multiple value="False" />
+              <Default />
+              <Mode>Field</Mode>
+              <Field_ToolId value="9" />
+              <Field_ConnectionName />
+              <Field_Connection>Output</Field_Connection>
+              <Field_IsOutput value="True" />
+              <Field_IncludeNone value="False" />
+              <Field_FilterTypes>Bool,Byte,Int16,Int32,Int64,FixedDecimal,Float,Double,String,WString,V_String,V_WString,Date,Time,DateTime,Blob,SpatialObj</Field_FilterTypes>
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Wizard</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="4" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,475 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Directory.Directory">
+        <Position x="42" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Directory>C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary</Directory>
+          <FileSpec>SALES-*.csv</FileSpec>
+          <IncludeSubDirs value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dir C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\SALES-*.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="FullPath" size="32767" type="V_WString" />
+            <Field name="Directory" size="32767" type="V_WString" />
+            <Field name="FileName" size="260" type="V_WString" />
+            <Field name="ShortFileName" size="14" type="V_WString" />
+            <Field name="CreationTime" type="DateTime" />
+            <Field name="LastAccessTime" type="DateTime" />
+            <Field name="LastWriteTime" type="DateTime" />
+            <Field name="Size" type="Int64" />
+            <Field name="AttributeArchive" type="Bool" />
+            <Field name="AttributeCompressed" type="Bool" />
+            <Field name="AttributeEncrypted" type="Bool" />
+            <Field name="AttributeHidden" type="Bool" />
+            <Field name="AttributeNormal" type="Bool" />
+            <Field name="AttributeOffline" type="Bool" />
+            <Field name="AttributeReadonly" type="Bool" />
+            <Field name="AttributeReparsePoint" type="Bool" />
+            <Field name="AttributeSparseFile" type="Bool" />
+            <Field name="AttributeSystem" type="Bool" />
+            <Field name="AttributeTemporary" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDirectory" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="282" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>Contains([FullPath],"june2022")</Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Contains([FullPath],"june2022")</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="True">
+          <RecordInfo>
+            <Field name="FullPath" size="32767" type="V_WString" />
+            <Field name="Directory" size="32767" type="V_WString" />
+            <Field name="FileName" size="260" type="V_WString" />
+            <Field name="ShortFileName" size="14" type="V_WString" />
+            <Field name="CreationTime" type="DateTime" />
+            <Field name="LastAccessTime" type="DateTime" />
+            <Field name="LastWriteTime" type="DateTime" />
+            <Field name="Size" type="Int64" />
+            <Field name="AttributeArchive" type="Bool" />
+            <Field name="AttributeCompressed" type="Bool" />
+            <Field name="AttributeEncrypted" type="Bool" />
+            <Field name="AttributeHidden" type="Bool" />
+            <Field name="AttributeNormal" type="Bool" />
+            <Field name="AttributeOffline" type="Bool" />
+            <Field name="AttributeReadonly" type="Bool" />
+            <Field name="AttributeReparsePoint" type="Bool" />
+            <Field name="AttributeSparseFile" type="Bool" />
+            <Field name="AttributeSystem" type="Bool" />
+            <Field name="AttributeTemporary" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="False">
+          <RecordInfo>
+            <Field name="FullPath" size="32767" type="V_WString" />
+            <Field name="Directory" size="32767" type="V_WString" />
+            <Field name="FileName" size="260" type="V_WString" />
+            <Field name="ShortFileName" size="14" type="V_WString" />
+            <Field name="CreationTime" type="DateTime" />
+            <Field name="LastAccessTime" type="DateTime" />
+            <Field name="LastWriteTime" type="DateTime" />
+            <Field name="Size" type="Int64" />
+            <Field name="AttributeArchive" type="Bool" />
+            <Field name="AttributeCompressed" type="Bool" />
+            <Field name="AttributeEncrypted" type="Bool" />
+            <Field name="AttributeHidden" type="Bool" />
+            <Field name="AttributeNormal" type="Bool" />
+            <Field name="AttributeOffline" type="Bool" />
+            <Field name="AttributeReadonly" type="Bool" />
+            <Field name="AttributeReparsePoint" type="Bool" />
+            <Field name="AttributeSparseFile" type="Bool" />
+            <Field name="AttributeSystem" type="Bool" />
+            <Field name="AttributeTemporary" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicInput.DynamicInput">
+        <Position x="510" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <InputConfiguration>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\Template\sale template.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+          </InputConfiguration>
+          <Mode>ReadList</Mode>
+          <ReadList_Field>FullPath</ReadList_Field>
+          <ReadList_Type>Path</ReadList_Type>
+          <ErrorBehaviour>Error</ErrorBehaviour>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ID" size="254" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\Template\sale template.csv" type="V_String" />
+            <Field name="SECTION" size="254" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\Template\sale template.csv" type="V_String" />
+            <Field name="PRODUCT" size="254" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\Template\sale template.csv" type="V_String" />
+            <Field name="SALES" size="254" source="File: C:\Users\perep\Downloads\datasets\1-1-using-multiple-files-_-calgary\Template\sale template.csv" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="90" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\perep\OneDrive\Desktop\Month Names.xlsx|||`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Month Names.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="MonthYear" size="255" source="File: C:\Users\perep\OneDrive\Desktop\Month Names.xlsx|||`Sheet1$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="186" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="MonthYear" action="GroupBy" rename="MonthYear" />
+            <SummarizeField field="MonthYear" action="Count" rename="Count" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="MonthYear" size="255" source="Summarize: GroupBy - MonthYear" type="V_String" />
+            <Field name="Count" source="Summarize: Count - MonthYear" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.CrossTab.CrossTab">
+        <Position x="294" y="18" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields>
+            <Field field="MonthYear" />
+          </GroupFields>
+          <HeaderField field="MonthYear" />
+          <DataField field="Count" />
+          <Methods>
+            <Method method="Sum" />
+          </Methods>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="MonthYear" size="255" source="CrossTab:Group:Sum:" type="V_String" />
+            <Field name="april2021" source="CrossTab:Header:MonthYear:april2021:Sum:" type="Int64" />
+            <Field name="april2022" source="CrossTab:Header:MonthYear:april2022:Sum:" type="Int64" />
+            <Field name="august2021" source="CrossTab:Header:MonthYear:august2021:Sum:" type="Int64" />
+            <Field name="august2022" source="CrossTab:Header:MonthYear:august2022:Sum:" type="Int64" />
+            <Field name="december2021" source="CrossTab:Header:MonthYear:december2021:Sum:" type="Int64" />
+            <Field name="december2022" source="CrossTab:Header:MonthYear:december2022:Sum:" type="Int64" />
+            <Field name="february2021" source="CrossTab:Header:MonthYear:february2021:Sum:" type="Int64" />
+            <Field name="february2022" source="CrossTab:Header:MonthYear:february2022:Sum:" type="Int64" />
+            <Field name="january2021" source="CrossTab:Header:MonthYear:january2021:Sum:" type="Int64" />
+            <Field name="january2022" source="CrossTab:Header:MonthYear:january2022:Sum:" type="Int64" />
+            <Field name="july2021" source="CrossTab:Header:MonthYear:july2021:Sum:" type="Int64" />
+            <Field name="july2022" source="CrossTab:Header:MonthYear:july2022:Sum:" type="Int64" />
+            <Field name="june2021" source="CrossTab:Header:MonthYear:june2021:Sum:" type="Int64" />
+            <Field name="june2022" source="CrossTab:Header:MonthYear:june2022:Sum:" type="Int64" />
+            <Field name="march2021" source="CrossTab:Header:MonthYear:march2021:Sum:" type="Int64" />
+            <Field name="march2022" source="CrossTab:Header:MonthYear:march2022:Sum:" type="Int64" />
+            <Field name="may2021" source="CrossTab:Header:MonthYear:may2021:Sum:" type="Int64" />
+            <Field name="may2022" source="CrossTab:Header:MonthYear:may2022:Sum:" type="Int64" />
+            <Field name="november2021" source="CrossTab:Header:MonthYear:november2021:Sum:" type="Int64" />
+            <Field name="november2022" source="CrossTab:Header:MonthYear:november2022:Sum:" type="Int64" />
+            <Field name="october2021" source="CrossTab:Header:MonthYear:october2021:Sum:" type="Int64" />
+            <Field name="october2022" source="CrossTab:Header:MonthYear:october2022:Sum:" type="Int64" />
+            <Field name="september2021" source="CrossTab:Header:MonthYear:september2021:Sum:" type="Int64" />
+            <Field name="september2022" source="CrossTab:Header:MonthYear:september2022:Sum:" type="Int64" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxCrossTab" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.DropDownListBox.DropDown">
+        <Position x="402" y="18" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Drop Down (9)</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="342" y="102" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Update Value</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="618" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\perep\AppData\Local\Temp\Engine_19176_4be88b3593c22a4fada5f727f05a0c0c_\Engine_19176_de491b8c9ef6b642ade051f7eebd51dd~.yxdb</TempFile>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="10" Connection="Action" />
+      <Destination ToolID="2" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="True" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="9" Connection="Question Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="9" Connection="Question" />
+      <Destination ToolID="10" Connection="Question" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Drop Down (9)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Dynamic Input - Analytical App</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="b351546e-c1ca-4352-929d-3c3324b8c747" />
+      <Telemetry>
+        <PreviousWorkflowId value="f61515c6-df07-4ab2-848d-1774d063e627" />
+        <OriginWorkflowId value="f61515c6-df07-4ab2-848d-1774d063e627" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>UpdateValue</Type>
+              <Description />
+              <ToolId value="10" />
+              <Mode>Simple</Mode>
+              <Variable />
+              <Replace value="True" />
+              <ReplaceText>june2022</ReplaceText>
+              <Destination>2/Expression</Destination>
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (8)</Name>
+          <ToolId value="8" />
+          <Questions>
+            <Question>
+              <Type>ListBox</Type>
+              <Description>Select Month and Year</Description>
+              <Name>Drop Down (9)</Name>
+              <ToolId value="9" />
+              <Multiple value="False" />
+              <Default />
+              <Mode>Field</Mode>
+              <Field_ToolId value="7" />
+              <Field_ConnectionName />
+              <Field_Connection>Output</Field_Connection>
+              <Field_IsOutput value="True" />
+              <Field_IncludeNone value="False" />
+              <Field_FilterTypes>Bool,Byte,Int16,Int32,Int64,FixedDecimal,Float,Double,String,WString,V_String,V_WString,Date,Time,DateTime,Blob,SpatialObj</Field_FilterTypes>
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Wizard</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImageStd value="39" />
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="11" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>

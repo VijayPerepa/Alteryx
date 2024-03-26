@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="174" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File />
+          <FormatSpecificOptions UseDcm="true" Format="23" RecordLimit="">
+            <ReadCentroids>False</ReadCentroids>
+            <Query>select postgres."public".store_sales.*,
+	postgres."public".store_sales.record_id as record_id1,
+	postgres."public".store_sales.store as store1,
+	postgres."public".store_sales.department as department1,
+	postgres."public".store_sales.weekly_sales as weekly_sales1,
+	postgres."public".store_sales.isholiday as isholiday1,
+	postgres."public".store_sales."date" as date1,
+	postgres."public".store_sales."year" as year1,
+	postgres."public".store_sales.monthname as monthname1,
+	postgres."public".store_sales."month" as month1 
+from postgres."public".store_sales</Query>
+            <TableStyle>Quoted</TableStyle>
+            <PostSQL />
+            <CacheData>False</CacheData>
+            <Table />
+            <SessionReadOnly>True</SessionReadOnly>
+            <ReadUncommitted>False</ReadUncommitted>
+            <Connection DcmType="ConnectionId">c3497815-3fc8-429c-8a8b-2e799a3cd3d3</Connection>
+            <NoProgress>True</NoProgress>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <PreSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dcm:Postgres Connection — postgres
+Query=select postgres."public".sto...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="record_id" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="Int32" />
+            <Field name="store" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="Int32" />
+            <Field name="department" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="Int32" />
+            <Field name="weekly_sales" scale="6" size="30" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="FixedDecimal" />
+            <Field name="isholiday" size="5" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="V_String" />
+            <Field name="date" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="Date" />
+            <Field name="year" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="Int32" />
+            <Field name="month" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="Int32" />
+            <Field name="monthname" size="255" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="V_String" />
+            <Field name="record_id1" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="Int32" />
+            <Field name="store1" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="Int32" />
+            <Field name="department1" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="Int32" />
+            <Field name="weekly_sales1" scale="6" size="30" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="FixedDecimal" />
+            <Field name="isholiday1" size="5" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="V_String" />
+            <Field name="date1" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="Date" />
+            <Field name="year1" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="Int32" />
+            <Field name="monthname1" size="255" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="V_String" />
+            <Field name="month1" source="File: select postgres.&quot;public&quot;.store_sales.*,&#xA;	postgres.&quot;public&quot;.store_sales.record_id as record_id1,&#xA;	postgres.&quot;public&quot;.store_sales.store as store1,&#xA;	postgres.&quot;public&quot;.store_sales.department as department1,&#xA;	postgres.&quot;public&quot;.store_sales.weekly_sales as weekly_sales1,&#xA;	postgres.&quot;public&quot;.store_sales.isholiday as isholiday1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;date&quot; as date1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;year&quot; as year1,&#xA;	postgres.&quot;public&quot;.store_sales.monthname as monthname1,&#xA;	postgres.&quot;public&quot;.store_sales.&quot;month&quot; as month1 &#xA;from postgres.&quot;public&quot;.store_sales" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="426" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File />
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions UseDcm="true" MaxRecords="" Format="23">
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TableStyle>Quoted</TableStyle>
+            <TransactionMessages>False</TransactionMessages>
+            <Table>Summary Data 1</Table>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <OutputOption>Overwrite</OutputOption>
+            <Connection DcmType="ConnectionId">c3497815-3fc8-429c-8a8b-2e799a3cd3d3</Connection>
+            <Projection />
+            <PostSQL />
+            <TransactionSize>10000</TransactionSize>
+            <PreSQL />
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dcm:Postgres Connection — postgres
+Table=Summary Data 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxSpatialPluginsGui.Summarize.Summarize">
+        <Position x="294" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <SummarizeFields>
+            <SummarizeField field="store" action="GroupBy" rename="store" />
+            <SummarizeField field="weekly_sales" action="Sum" rename="Sum_weekly_sales" />
+            <SummarizeField field="department" action="GroupBy" rename="department" />
+            <SummarizeField field="monthname" action="GroupBy" rename="monthname" />
+          </SummarizeFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxSummarize" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Connecting database</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="fcfba684-a8c8-4f7c-8b7c-bdc0ecd614c2" />
+      <Telemetry>
+        <PreviousWorkflowId value="f3035931-1518-4090-952b-1d405fa14e62" />
+        <OriginWorkflowId value="f3035931-1518-4090-952b-1d405fa14e62" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
